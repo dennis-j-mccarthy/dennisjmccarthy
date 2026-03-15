@@ -65,7 +65,7 @@ export default function ProjectCarousel({ projects }: Props) {
                 src={projects[prev].image}
                 alt={projects[prev].title}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           )}
@@ -83,7 +83,7 @@ export default function ProjectCarousel({ projects }: Props) {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-contain transition-transform duration-700 group-hover:scale-105"
                 priority
               />
             ) : (
@@ -91,7 +91,7 @@ export default function ProjectCarousel({ projects }: Props) {
             )}
           </div>
 
-          <div className="absolute inset-0 z-30 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+{/* No overlay — keep full image visible */}
         </Link>
 
         {/* Content — also animates in */}

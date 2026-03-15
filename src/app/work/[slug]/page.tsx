@@ -75,17 +75,18 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Featured Image */}
       <section className="bg-white px-6 py-16">
         <div className="mx-auto max-w-5xl">
-          <div className="relative h-72 overflow-hidden rounded-3xl bg-neutral-100 shadow-2xl shadow-primary-blue/10 md:h-[500px]">
+          <div className="overflow-hidden rounded-3xl bg-neutral-100 shadow-2xl shadow-primary-blue/10">
             {project.image ? (
               <Image
                 src={project.image}
                 alt={project.title}
-                fill
-                className="object-cover"
+                width={1200}
+                height={800}
+                className="h-auto w-full"
                 priority
               />
             ) : (
-              <div className="mesh-gradient h-full w-full" />
+              <div className="mesh-gradient aspect-[4/3] w-full" />
             )}
           </div>
         </div>

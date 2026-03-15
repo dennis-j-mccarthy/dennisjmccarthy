@@ -43,7 +43,7 @@ export default function WorkPage() {
               >
                 {/* Image */}
                 <div
-                  className={`relative h-72 overflow-hidden rounded-2xl bg-neutral-100 md:h-96 ${
+                  className={`relative overflow-hidden rounded-2xl bg-neutral-100 ${
                     i % 2 === 1 ? "md:order-2" : ""
                   }`}
                 >
@@ -51,11 +51,12 @@ export default function WorkPage() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      width={800}
+                      height={600}
+                      className="h-auto w-full transition-transform duration-700 group-hover:scale-105"
                     />
                   ) : (
-                    <div className="mesh-gradient h-full w-full" />
+                    <div className="mesh-gradient aspect-[4/3] w-full" />
                   )}
                 </div>
 
